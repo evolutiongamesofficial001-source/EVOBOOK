@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #121212;
+  color: #eee;
+}
+
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #000;
+  border-bottom: 2px solid #f1c40f;
+}
+
+.topo h1 {
+  color: #f1c40f;
+}
+
+.topo button {
+  background: #f1c40f;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.upload {
+  max-width: 500px;
+  margin: 20px auto;
+  background: #1c1c1c;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+}
+
+button {
+  background: #f1c40f;
+  cursor: pointer;
+}
+
+#lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.card h3 {
+  color: #f1c40f;
+}
+
+.publico {
+  color: #f1c40f;
+  font-weight: bold;
+}
+
+.delete {
+  background: #c0392b;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.rodape {
+  text-align: center;
+  padding: 15px;
+  background: #000;
+  color: #f1c40f;
+  margin-top: 30px;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Evobook</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topo">
+  <h1>📚 Evobook</h1>
+  <button id="btnConta"></button>
+</header>
+
+<section class="upload">
+  <h2>Publicar Livro</h2>
+
+  <input id="titulo" placeholder="Título do livro">
+  <input id="tags" placeholder="Tags (ex: fantasia, ação)">
+  
+  <select id="publico">
+    <option value="">Selecione o público-alvo</option>
+    <option value="Infantil">Infantil</option>
+    <option value="Juvenil">Juvenil</option>
+    <option value="Adulto">Adulto</option>
+  </select>
+
+  <input type="file" id="pdf" accept="application/pdf">
+  <button onclick="enviarPDF()">Publicar</button>
+</section>
+
+<section id="lista"></section>
+
+<footer class="rodape">
+  Criado por <strong>Evolution Studios</strong>
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
