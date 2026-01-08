@@ -1,22 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Login</title>
+  <title>Login - Evobook</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<section class="upload">
-  <h2>Login</h2>
-  <input id="email" placeholder="Email">
-  <input id="senha" type="password" placeholder="Senha">
-  <button onclick="login()">Entrar</button>
-  <p><a href="register.html">Criar conta</a></p>
-</section>
+<div class="container">
+  <div class="form-publicar">
+    <h2>🔐 Criar conta / Login</h2>
+
+    <input id="nome" placeholder="Nome de usuário (único)">
+    <input id="email" placeholder="Email">
+    <input id="senha" type="password" placeholder="Senha">
+
+    <button onclick="criarConta()">Criar Conta</button>
+    <button onclick="login()">Entrar</button>
+  </div>
+</div>
 
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
-<script src="auth.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

@@ -88,3 +88,51 @@ button {
   color: #f1c40f;
   margin-top: 30px;
 }
+
+/* 🔎 BUSCA */
+.busca {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  background: #0b0b0b;
+  border: 1px solid #ffcc00;
+  border-radius: 10px;
+  color: #ffcc00;
+  font-size: 15px;
+}
+
+.busca::placeholder {
+  color: #777;
+}
+
+/* ⬇️ DOWNLOADS */
+.downloads {
+  font-size: 13px;
+  color: #00ffcc;
+  margin-bottom: 6px;
+}
+
+/* ✨ FUTURISMO */
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 204, 0, 0.15),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+

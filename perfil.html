@@ -1,28 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Perfil</title>
+  <title>Perfil - Evobook</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<section class="upload">
-  <h2>Meu Perfil</h2>
-  <p id="dados"></p>
-
-  <h3>Meus Livros</h3>
-  <div id="meusLivros"></div>
-
+<header>
+  <h1>👤 Perfil</h1>
   <button onclick="logout()">Sair</button>
-</section>
+</header>
 
-<footer class="rodape">
+<div class="container">
+  <h2 id="nomePerfil"></h2>
+  <h3>📚 Livros publicados</h3>
+  <div id="lista"></div>
+</div>
+
+<footer>
   Criado por <strong>Evolution Studios</strong>
 </footer>
 
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
-<script src="perfil.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

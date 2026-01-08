@@ -4,40 +4,51 @@
   <meta charset="UTF-8">
   <title>Evobook</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="style.css">
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
 </head>
 <body>
 
-<header class="topo">
-  <h1>📚 Evobook</h1>
+<header>
+  <h1>📘 Evobook</h1>
   <button id="btnConta"></button>
 </header>
 
-<section class="upload">
-  <h2>Publicar Livro</h2>
+<div class="container">
 
-  <input id="titulo" placeholder="Título do livro">
-  <input id="tags" placeholder="Tags (ex: fantasia, ação)">
-  
-  <select id="publico">
-    <option value="">Selecione o público-alvo</option>
-    <option value="Infantil">Infantil</option>
-    <option value="Juvenil">Juvenil</option>
-    <option value="Adulto">Adulto</option>
-  </select>
+  <!-- Publicar -->
+  <div class="form-publicar">
+    <h2>Publicar Livro</h2>
+    <input id="titulo" placeholder="Título do livro">
+    <input id="tags" placeholder="Tags (ex: fantasia, ação)">
+    <select id="publico">
+      <option value="">🎯 Público-alvo</option>
+      <option value="infantil">Infantil</option>
+      <option value="jovem">Jovem</option>
+      <option value="adulto">Adulto</option>
+      <option value="tecnico">Técnico</option>
+    </select>
+    <input type="file" id="pdf" accept="application/pdf">
+    <button onclick="enviarPDF()">📤 Publicar</button>
+  </div>
 
-  <input type="file" id="pdf" accept="application/pdf">
-  <button onclick="enviarPDF()">Publicar</button>
-</section>
+  <!-- Busca -->
+  <input class="busca" id="busca"
+    placeholder="🔎 Buscar por título, autor ou tag"
+    oninput="buscarLivros()">
 
-<section id="lista"></section>
+  <!-- Lista -->
+  <div id="lista"></div>
+</div>
 
-<footer class="rodape">
+<footer>
   Criado por <strong>Evolution Studios</strong>
 </footer>
 
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
