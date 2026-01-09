@@ -15,16 +15,17 @@
 
 <header>
   <h1>📘 Evobook</h1>
-  <button id="btnConta"></button>
+  <button id="btnConta">Conta</button>
 </header>
 
 <div class="container">
 
-  <!-- Publicar -->
   <div class="form-publicar">
     <h2>Publicar Livro</h2>
+
     <input id="titulo" placeholder="Título do livro">
     <input id="tags" placeholder="Tags (ex: fantasia, ação)">
+
     <select id="publico">
       <option value="">🎯 Público-alvo</option>
       <option value="infantil">Infantil</option>
@@ -32,16 +33,18 @@
       <option value="adulto">Adulto</option>
       <option value="tecnico">Técnico</option>
     </select>
+
     <input type="file" id="pdf" accept="application/pdf">
     <button onclick="enviarPDF()">📤 Publicar</button>
   </div>
 
-  <!-- Busca -->
-  <input class="busca" id="busca"
+  <input
+    id="busca"
+    class="busca"
     placeholder="🔎 Buscar por título, autor ou tag"
-    oninput="buscarLivros()">
+    oninput="buscarLivros()"
+  >
 
-  <!-- Lista -->
   <div id="lista"></div>
 </div>
 
