@@ -9,7 +9,8 @@ body {
   color: #eee;
 }
 
-.topo {
+/* HEADER */
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,11 +19,12 @@ body {
   border-bottom: 2px solid #f1c40f;
 }
 
-.topo h1 {
+header h1 {
   color: #f1c40f;
+  margin: 0;
 }
 
-.topo button {
+header button {
   background: #f1c40f;
   border: none;
   padding: 8px 14px;
@@ -31,15 +33,28 @@ body {
   cursor: pointer;
 }
 
-.upload {
-  max-width: 500px;
-  margin: 20px auto;
+/* CONTAINER */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* FORM PUBLICAR */
+.form-publicar {
   background: #1c1c1c;
   padding: 20px;
   border-radius: 10px;
+  margin-bottom: 20px;
 }
 
-input, select, button {
+.form-publicar h2 {
+  margin-top: 0;
+}
+
+input,
+select,
+button {
   width: 100%;
   padding: 10px;
   margin-top: 10px;
@@ -51,45 +66,10 @@ input, select, button {
 button {
   background: #f1c40f;
   cursor: pointer;
-}
-
-#lista {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 15px;
-  padding: 20px;
-}
-
-.card {
-  background: #1a1a1a;
-  padding: 15px;
-  border-radius: 10px;
-}
-
-.card h3 {
-  color: #f1c40f;
-}
-
-.publico {
-  color: #f1c40f;
   font-weight: bold;
 }
 
-.delete {
-  background: #c0392b;
-  color: #fff;
-  margin-top: 10px;
-}
-
-.rodape {
-  text-align: center;
-  padding: 15px;
-  background: #000;
-  color: #f1c40f;
-  margin-top: 30px;
-}
-
-/* 🔎 BUSCA */
+/* BUSCA */
 .busca {
   width: 100%;
   padding: 12px;
@@ -105,19 +85,39 @@ button {
   color: #777;
 }
 
-/* ⬇️ DOWNLOADS */
+/* LISTA */
+#lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 15px;
+}
+
+/* CARD */
+.card {
+  background: #1a1a1a;
+  padding: 15px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card h3 {
+  color: #f1c40f;
+  margin-top: 0;
+}
+
+.publico {
+  color: #f1c40f;
+  font-weight: bold;
+}
+
 .downloads {
   font-size: 13px;
   color: #00ffcc;
   margin-bottom: 6px;
 }
 
-/* ✨ FUTURISMO */
-.card {
-  position: relative;
-  overflow: hidden;
-}
-
+/* EFEITO FUTURISTA */
 .card::before {
   content: "";
   position: absolute;
@@ -136,3 +136,11 @@ button {
   opacity: 1;
 }
 
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #000;
+  color: #f1c40f;
+  margin-top: 30px;
+}
